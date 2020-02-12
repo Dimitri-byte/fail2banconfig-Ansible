@@ -7,7 +7,7 @@
 DOCUMENTATION='''
 module: fail2banconfig
 author: Dimitri Biard
-description: This module creates a basic file for Fail2ban in /etc/fail2ban/jail.d/custom.conf. For more information about Fail2ban you can check <https://fail2ban.org/wiki/index.php/Main_page>
+description: This module creates a basic config file for Fail2ban in /etc/fail2ban/jail.d/custom.conf. For more information about Fail2ban you can check <https://fail2ban.org/wiki/index.php/Main_page>
 
 option:
   ignoreip:
@@ -54,8 +54,8 @@ from ansible.module_utils.basic import AnsibleModule
 import os
 ##################  FUNCTIONS ###########################
 
-# This function create the the file custom.conf and write
-# basic argument.
+# This function creates the the file custom.conf and write
+# basic arguments.
 def customfile(ignoreip, findtime, bantime, maxretry):
 	# Create the file
 	custom = open(path, "w")
